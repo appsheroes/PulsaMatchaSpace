@@ -4,16 +4,16 @@ workflows:
     max_build_duration: 60
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: SaveProgressKeeper-Key
+      app_store_connect: PulsaMatchaSpace-Key
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.mikhailBirman.saveProgressKeeper
+        bundle_identifier: com.askhatBekenov.pulsaMatchaSpace
       vars:
-        XCODE_PROJECT: "SaveProgressKeeper.xcodeproj"
-        XCODE_SCHEME: "SaveProgressKeeper"
-        BUNDLE_ID: "com.mikhailBirman.saveProgressKeeper"
-        APP_STORE_APPLE_ID: 6778756302
+        XCODE_PROJECT: "PulsaMatchaSpace.xcodeproj"
+        XCODE_SCHEME: "PulsaMatchaSpace"
+        BUNDLE_ID: "com.askhatBekenov.pulsaMatchaSpace"
+        APP_STORE_APPLE_ID: 6785904505
       xcode: latest
     triggering:
       events:
