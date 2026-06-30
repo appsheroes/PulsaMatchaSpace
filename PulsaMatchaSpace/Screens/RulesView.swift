@@ -77,6 +77,9 @@ struct RulesView: View {
                 Spacer()
             }
         }
+        .onAppear {
+            hasSeenRules = true
+        }
     }
 
     private var topBar: some View {

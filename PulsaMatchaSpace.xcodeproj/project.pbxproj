@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0529174A2FF3F57F00C69C65 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 052917492FF3F57F00C69C65 /* AppsFlyerLib */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		056E07302FE81F240005FF93 /* PulsaMatchaSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsaMatchaSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0529174A2FF3F57F00C69C65 /* AppsFlyerLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = PulsaMatchaSpace;
 			packageProductDependencies = (
+				052917492FF3F57F00C69C65 /* AppsFlyerLib */,
 			);
 			productName = PulsaMatchaSpace;
 			productReference = 056E07302FE81F240005FF93 /* PulsaMatchaSpace.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 056E07272FE81F240005FF93;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				052917482FF3F57F00C69C65 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 056E07312FE81F240005FF93 /* Products */;
 			projectDirPath = "";
@@ -278,7 +287,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -316,7 +325,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -342,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		052917482FF3F57F00C69C65 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = exactVersion;
+				version = 6.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		052917492FF3F57F00C69C65 /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 052917482FF3F57F00C69C65 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 056E07282FE81F240005FF93 /* Project object */;
 }
