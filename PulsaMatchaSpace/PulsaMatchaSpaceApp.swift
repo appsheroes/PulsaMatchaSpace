@@ -12,6 +12,7 @@ struct PulsaMatchaSpaceApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(appDelegate)
                 .preferredColorScheme(.dark)
         }
     }

@@ -9,12 +9,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var appFlyerHelper: AppDelegate
     @StateObject private var coordinator = Coordinator()
     @State private var isLoading = true
 
     var body: some View {
         ZStack {
-            if isLoading {
+            if !appFlyerHelper.isLoaded {
                 LoadingView(isLoading: $isLoading)
                     .transition(.opacity)
             } else {

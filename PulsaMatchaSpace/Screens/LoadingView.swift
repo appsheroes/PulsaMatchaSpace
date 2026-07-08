@@ -13,44 +13,49 @@ struct LoadingView: View {
 
     @State private var startDate = Date()
     @State private var floatY: CGFloat = 0
-
+    @EnvironmentObject var appFlyerHelper: AppDelegate
+    
     private var skinColor: Color {
         PulseSkin.byId(StorageManager.shared.read().equippedSkinId).color
     }
 
     var body: some View {
-        ZStack {
-            BackgroundView()
-
-            VStack(spacing: 0) {
-                Spacer().frame(height: 120)
-
-                logo
-
-                Spacer().frame(height: 8)
-
-                heroStage
-
-                Spacer()
-
-                dotLoaderBlock
-                    .padding(.bottom, 34)
-
-                LoadingBar(startDate: startDate)
-                    .frame(height: 6)
-                    .padding()
+        if appFlyerHelper.isShown {
+            AppsFlyerNotificationView()
+        } else {
+            ZStack {
+                BackgroundView()
+                
+                VStack(spacing: 0) {
+                    Spacer().frame(height: 120)
+                    
+                    logo
+                    
+                    Spacer().frame(height: 8)
+                    
+                    heroStage
+                    
+                    Spacer()
+                    
+                    dotLoaderBlock
+                        .padding(.bottom, 34)
+                    
+                    LoadingBar(startDate: startDate)
+                        .frame(height: 6)
+                        .padding()
+                }
+                .padding(.horizontal, Spacing.screenH)
             }
-            .padding(.horizontal, Spacing.screenH)
-        }
-        .ignoresSafeArea()
-        .onAppear {
-            startDate = Date()
-            withAnimation(.easeInOut(duration: 3.5).repeatForever(autoreverses: true)) {
-                floatY = -12
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                withAnimation(.easeInOut(duration: 0.35)) {
-                    isLoading = false
+            .ignoresSafeArea()
+            .onAppear {
+                startDate = Date()
+                withAnimation(.easeInOut(duration: 3.5).repeatForever(autoreverses: true)) {
+                    floatY = -12
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                    withAnimation(.easeInOut(duration: 0.35)) {
+                        isLoading = false
+                    }
                 }
             }
         }
@@ -142,6 +147,27 @@ private struct LoadingBar: View {
             }
         }
         .clipShape(Capsule())
+    }
+}
+
+fileprivate struct AppsFlyerNotificationView: View {
+    @EnvironmentObject var appHelper: AppDelegate
+    var body: some View {
+        VStack{
+            Spacer()
+            Button(action: {
+                appHelper.appsFlyerRulesView()
+            }) {
+                Text("RELOAD")
+                    .font(.system(size: 18, weight: .medium))
+                    .foregroundColor(.black)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.white)
+                    .cornerRadius(10)
+            }
+        }
+        .padding()
     }
 }
 

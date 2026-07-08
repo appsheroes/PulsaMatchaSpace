@@ -6,20 +6,86 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		05E04A5B2FFEB28D005CF23F /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 05E04A5A2FFEB28D005CF23F /* AppsFlyerLib */; };
+		05E04A672FFEB2AF005CF23F /* PushNotificationsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 05E04A602FFEB2AF005CF23F /* PushNotificationsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05E04A652FFEB2AF005CF23F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 056E07282FE81F240005FF93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05E04A5F2FFEB2AF005CF23F;
+			remoteInfo = PushNotificationsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		05E04A6C2FFEB2AF005CF23F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				05E04A672FFEB2AF005CF23F /* PushNotificationsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		056E07302FE81F240005FF93 /* PulsaMatchaSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulsaMatchaSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05E04A602FFEB2AF005CF23F /* PushNotificationsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushNotificationsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		05E04A582FFEB25C005CF23F /* Exceptions for "PulsaMatchaSpace" folder in "PulsaMatchaSpace" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 056E072F2FE81F240005FF93 /* PulsaMatchaSpace */;
+		};
+		05E04A6B2FFEB2AF005CF23F /* Exceptions for "PushNotificationsExtension" folder in "PushNotificationsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 05E04A5F2FFEB2AF005CF23F /* PushNotificationsExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		056E07322FE81F240005FF93 /* PulsaMatchaSpace */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				05E04A582FFEB25C005CF23F /* Exceptions for "PulsaMatchaSpace" folder in "PulsaMatchaSpace" target */,
+			);
 			path = PulsaMatchaSpace;
+			sourceTree = "<group>";
+		};
+		05E04A612FFEB2AF005CF23F /* PushNotificationsExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				05E04A6B2FFEB2AF005CF23F /* Exceptions for "PushNotificationsExtension" folder in "PushNotificationsExtension" target */,
+			);
+			path = PushNotificationsExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		056E072D2FE81F240005FF93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05E04A5B2FFEB28D005CF23F /* AppsFlyerLib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E04A5D2FFEB2AF005CF23F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				056E07322FE81F240005FF93 /* PulsaMatchaSpace */,
+				05E04A612FFEB2AF005CF23F /* PushNotificationsExtension */,
 				056E07312FE81F240005FF93 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				056E07302FE81F240005FF93 /* PulsaMatchaSpace.app */,
+				05E04A602FFEB2AF005CF23F /* PushNotificationsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,20 +123,45 @@
 				056E072C2FE81F240005FF93 /* Sources */,
 				056E072D2FE81F240005FF93 /* Frameworks */,
 				056E072E2FE81F240005FF93 /* Resources */,
+				05E04A6C2FFEB2AF005CF23F /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				05E04A662FFEB2AF005CF23F /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				056E07322FE81F240005FF93 /* PulsaMatchaSpace */,
 			);
 			name = PulsaMatchaSpace;
 			packageProductDependencies = (
+				05E04A5A2FFEB28D005CF23F /* AppsFlyerLib */,
 			);
 			productName = PulsaMatchaSpace;
 			productReference = 056E07302FE81F240005FF93 /* PulsaMatchaSpace.app */;
 			productType = "com.apple.product-type.application";
+		};
+		05E04A5F2FFEB2AF005CF23F /* PushNotificationsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05E04A682FFEB2AF005CF23F /* Build configuration list for PBXNativeTarget "PushNotificationsExtension" */;
+			buildPhases = (
+				05E04A5C2FFEB2AF005CF23F /* Sources */,
+				05E04A5D2FFEB2AF005CF23F /* Frameworks */,
+				05E04A5E2FFEB2AF005CF23F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				05E04A612FFEB2AF005CF23F /* PushNotificationsExtension */,
+			);
+			name = PushNotificationsExtension;
+			packageProductDependencies = (
+			);
+			productName = PushNotificationsExtension;
+			productReference = 05E04A602FFEB2AF005CF23F /* PushNotificationsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -83,6 +176,9 @@
 					056E072F2FE81F240005FF93 = {
 						CreatedOnToolsVersion = 26.4.1;
 					};
+					05E04A5F2FFEB2AF005CF23F = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
 				};
 			};
 			buildConfigurationList = 056E072B2FE81F240005FF93 /* Build configuration list for PBXProject "PulsaMatchaSpace" */;
@@ -95,6 +191,7 @@
 			mainGroup = 056E07272FE81F240005FF93;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				05E04A592FFEB28D005CF23F /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 056E07312FE81F240005FF93 /* Products */;
@@ -102,12 +199,20 @@
 			projectRoot = "";
 			targets = (
 				056E072F2FE81F240005FF93 /* PulsaMatchaSpace */,
+				05E04A5F2FFEB2AF005CF23F /* PushNotificationsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		056E072E2FE81F240005FF93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E04A5E2FFEB2AF005CF23F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,7 +229,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05E04A5C2FFEB2AF005CF23F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05E04A662FFEB2AF005CF23F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05E04A5F2FFEB2AF005CF23F /* PushNotificationsExtension */;
+			targetProxy = 05E04A652FFEB2AF005CF23F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		056E07392FE81F250005FF93 /* Debug */ = {
@@ -251,11 +371,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PulsaMatchaSpace/PulsaMatchaSpace.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PulsaMatchaSpace/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Matcha Space: Reflex";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -268,7 +391,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.askhatBekenov.pulsaMatchaSpace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -291,11 +414,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PulsaMatchaSpace/PulsaMatchaSpace.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PulsaMatchaSpace/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Matcha Space: Reflex";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -308,7 +434,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.askhatBekenov.pulsaMatchaSpace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -321,6 +447,74 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		05E04A692FFEB2AF005CF23F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PushNotificationsExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PushNotificationsExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.askhatBekenov.pulsaMatchaSpace.PushNotificationsExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05E04A6A2FFEB2AF005CF23F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PushNotificationsExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PushNotificationsExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.askhatBekenov.pulsaMatchaSpace.PushNotificationsExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -347,7 +541,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		05E04A682FFEB2AF005CF23F /* Build configuration list for PBXNativeTarget "PushNotificationsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05E04A692FFEB2AF005CF23F /* Debug */,
+				05E04A6A2FFEB2AF005CF23F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05E04A592FFEB28D005CF23F /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = exactVersion;
+				version = 6.18.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05E04A5A2FFEB28D005CF23F /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05E04A592FFEB28D005CF23F /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 056E07282FE81F240005FF93 /* Project object */;
 }
